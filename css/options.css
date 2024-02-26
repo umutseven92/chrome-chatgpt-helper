@@ -1,0 +1,106 @@
+:root {
+	--success-color: rgb(28, 184, 65);
+	--error-color: rgb(202, 60, 60);
+	--secondary-color: rgb(66, 184, 221);
+}
+
+.button-success,
+.button-error,
+.button-secondary {
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+	background: var(--success-color);
+}
+
+.button-error {
+	background: var(--error-color);
+}
+
+.button-secondary {
+	background: var(--secondary-color);
+}
+
+.button-xlarge {
+	font-size: 125%;
+}
+
+.button-xxlarge {
+	font-size: 150%;
+}
+
+h1 {
+	text-align: center;
+}
+
+body {
+	background-color: #fdfdfd;
+}
+
+h1,
+button,
+label,
+p {
+	color: #121212;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+legend {
+	font-size: 1.2em;
+}
+
+#base {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1000px;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.vl {
+	border-left: 2px solid #e5e5e5;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 2px;
+}
+
+input,
+textarea {
+	width: 100%;
+}
+
+.padded {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.restricted-scroll {
+	height: 600px;
+	border: 1px solid #eeeeee;
+	border-radius: 4px;
+}
+
+#info {
+	min-height: 1em;
+}
+
+.success {
+	color: var(--success-color);
+}
+
+.error {
+	color: var(--error-color);
+}
+
+.secondary {
+    color: var(--secondary-color);
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ChatGPT Helper Options</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+			integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+			crossorigin="anonymous"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css"
+		/>
+		<link rel="stylesheet" href="../css/options.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<h1>Chrome ChatGPT Helper</h1>
+		<div id="base">
+			<div class="pure-g">
+				<div class="pure-u-11-24">
+					<!-- Configuration -->
+					<div class="pure-g">
+						<div class="pure-u-1-1">
+							<div class="pure-form pure-form-stacked padded">
+								<legend>Configuration</legend>
+								<label for="oaiKey">OpenAI API Key:</label>
+								<input type="password" id="oaiKey" />
+								<label for="model">Model</label>
+								<select id="model">
+									<option value="gpt-4">GPT-4</option>
+									<option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+								</select>
+							</div>
+						</div>
+						<div class="pure-u-1-1">
+							<div class="pure-form padded">
+								<legend>Prompts</legend>
+								<div class="pure-menu pure-menu-scrollable restricted-scroll">
+									<div id="prompts"></div>
+								</div>
+								<button
+									id="addPrompt"
+									class="pure-button button-secondary button-xlarge"
+								>
+									Add Prompt
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pure-u-2-24">
+					<div class="vl"></div>
+				</div>
+				<div class="pure-u-11-24">
+					<!-- Explanation -->
+					<div class="pure-g">
+						<div class="pure-u-1-1">
+							<div class="pure-form">
+								<legend>OpenAI API Key</legend>
+								<p>
+									If your don't have an
+									<a href="https://platform.openai.com/signup">OpenAI account</a
+									>, please create one, generate an
+									<a href="https://platform.openai.com/api-keys"
+										>OpenAI API Key</a
+									>, then paste the <strong>Secret Key</strong> here. Keep this
+									key secret!
+								</p>
+								<p>
+									Make sure you have
+									<a href="https://platform.openai.com/account/billing/overview"
+										>enough credits</a
+									>
+									in your account. It is also a good idea to set
+									<a href="https://platform.openai.com/account/limits"
+										>usage limits</a
+									>, so you don't encounter any suprises!
+								</p>
+							</div>
+						</div>
+						<div class="pure-u-1-1">
+							<div class="pure-form">
+								<legend>Model</legend>
+								<p>
+									Choose your model. GPT-4 is smarter, but more expensive than
+									GTP-3.5 Turbo. See
+									<a href="https://openai.com/pricing">here</a> for pricing
+									details.
+								</p>
+							</div>
+						</div>
+
+						<div class="pure-u-1-1">
+							<div class="pure-form">
+								<legend>Prompts</legend>
+								<p>
+									Click <strong class="secondary">Add Prompt</strong> to add a
+									new prompt. Make sure that
+									<strong>your prompt names are unique</strong>. Click
+									<strong class="error">Delete Prompt</strong> to delete the
+									prompt.
+								</p>
+								<p>
+									When a prompt is run via the right-click menu, your text
+									selection will be replaced by the prompt result, and your
+									original selection will be copied to the clipboard, so you can
+									press <mark>Ctrl V</mark> to get it back.
+								</p>
+								<p>
+									You can use
+									<mark><i>$selection</i></mark> inside your prompts to insert
+									the selected text into the prompt.
+								</p>
+								<p>
+									Keep in mind that
+									<strong>changes won't be saved</strong> until the
+									<strong class="success">Save</strong> button is clicked!
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pure-g">
+				<div class="pure-u-1-1">
+					<p id="info"></p>
+					<button id="save" class="pure-button button-success button-xxlarge">
+						Save
+					</button>
+				</div>
+			</div>
+		</div>
+		<script src="../scripts/options.js"></script>
+	</body>
+</html>
