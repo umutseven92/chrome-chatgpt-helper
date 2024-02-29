@@ -32,7 +32,7 @@ Keep in mind that **changes won't be saved until the Save button is clicked!**
 ## Disclaimer
 
 > [!IMPORTANT]  
-> This extension does not collect any data whatsoever. It just bridges Google Chrome to ChatGPT; we are not responsible for ChatGPT generates. You are also responsible for any costs incurred by using this extension- this extension is free, but ChatGPT isn't. Like [mentioned above](./README.md#openai-api-key), set usage details.
+> This extension bridges Google Chrome to ChatGPT; we are not responsible for what ChatGPT might generate. You are responsible for any costs incurred by using this extension- this extension is free, but ChatGPT itself isn't. Like [mentioned above](./README.md#openai-api-key), set usage limits to avoid being overcharged. This extension does not collect any data whatsoever, not does it contain any tracking.
 
 ## Acknowledgments
 
