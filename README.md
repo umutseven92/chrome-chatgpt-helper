@@ -1,6 +1,5 @@
 ![Chrome ChatGPT Helper Logo](./images/icon-128.png)
 
-*(Logo was drawn using Aseprite, and is **not** AI generated)*
 
 # Chrome ChatGPT Helper
 
@@ -34,3 +33,8 @@ Keep in mind that **changes won't be saved until the Save button is clicked!**
 
 > [!IMPORTANT]  
 > This extension does not collect any data whatsoever. It just bridges Google Chrome to ChatGPT; we are not resposible for ChatGPT generates. You are also responsible for any costs incurred by using this extension- this extension is free, but ChatGPT isn't. Like [mentioned above](./README.md#openai-api-key), set usage details.
+
+## Acknowledgments
+
+* The logo was drawn using Aseprite, and is **not** AI generated.
+* [Pure.css](https://purecss.io/) is used in the options page.
