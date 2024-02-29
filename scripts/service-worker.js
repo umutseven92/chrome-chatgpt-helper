@@ -23,7 +23,6 @@ async function contextClick(info) {
 		chrome.runtime.openOptionsPage();
 		return;
 	}
-	
 	const model = await chrome.storage.sync.get(["model"]);
 
 	const fullPrompt = await getFullPrompt(info.menuItemId, selection);
@@ -43,7 +42,7 @@ async function contextClick(info) {
 	const res = await apiResult.json();
 	const replacement = res.choices[0].message.content;
 
-	await sendMessageToReplace(replacement);
+	await sendMessageToReplace(replacement, selection);
 }
 
 async function makeAPICall(fullPrompt, apiKey, model) {
@@ -79,7 +78,7 @@ async function getFullPrompt(promptID, selection) {
 	return "";
 }
 
-async function sendMessageToReplace(replacement) {
+async function sendMessageToReplace(replacement, selection) {
 	console.debug(
 		"Sending message from the service worker to the content script."
 	);
@@ -88,7 +87,10 @@ async function sendMessageToReplace(replacement) {
 		active: true,
 		lastFocusedWindow: true,
 	});
-	await chrome.tabs.sendMessage(tab.id, { replacement: replacement });
+	await chrome.tabs.sendMessage(tab.id, {
+		replacement: replacement,
+		selection: selection,
+	});
 }
 
 async function getPromptsFromStorage() {
