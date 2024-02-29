@@ -1,6 +1,6 @@
 {
 	"manifest_version": 3,
-	"name": "ChatGPT Helper",
+	"name": "Chrome ChatGPT Helper, Create Prompts and Use Them via the Right Click Menu",
 	"version": "1.0",
 	"description": "",
 	"permissions": ["contextMenus", "storage"],
