@@ -15,7 +15,7 @@ After installing the extension, click on the extension icon on the top right and
 
 If your don't have an [OpenAI account](https://platform.openai.com/signup), please create one, generate an [OpenAI API Key](https://platform.openai.com/api-keys), then paste the **Secret Key** here. Keep this key secret!
 
-Make sure you have [enough credits](https://platform.openai.com/account/billing/overview) in your account. It is also a good idea to set [usage limits](https://platform.openai.com/account/limits), so you don't encounter any suprises!
+Make sure you have [enough credits](https://platform.openai.com/account/billing/overview) in your account. It is also a good idea to set [usage limits](https://platform.openai.com/account/limits), so you don't encounter any surprises!
 
 ### Model
 
@@ -32,7 +32,7 @@ Keep in mind that **changes won't be saved until the Save button is clicked!**
 ## Disclaimer
 
 > [!IMPORTANT]  
-> This extension does not collect any data whatsoever. It just bridges Google Chrome to ChatGPT; we are not resposible for ChatGPT generates. You are also responsible for any costs incurred by using this extension- this extension is free, but ChatGPT isn't. Like [mentioned above](./README.md#openai-api-key), set usage details.
+> This extension does not collect any data whatsoever. It just bridges Google Chrome to ChatGPT; we are not responsible for ChatGPT generates. You are also responsible for any costs incurred by using this extension- this extension is free, but ChatGPT isn't. Like [mentioned above](./README.md#openai-api-key), set usage details.
 
 ## Acknowledgments
 
