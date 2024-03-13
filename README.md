@@ -1,6 +1,5 @@
 ![Chrome ChatGPT Helper Logo](./images/icon-128.png)
 
-
 # Chrome ChatGPT Helper
 
 Tired of copy pasting text into ChatGPT? Tired of switching tabs? Do you wish you could just run a prompt within Chrome with just a click? Well now you can!
@@ -27,7 +26,11 @@ Click **Add Prompt** to add a new prompt. Make sure that your prompt names are u
 
 When a prompt is run via the right-click menu, your text selection will be replaced by the prompt result, and your original selection will be copied to the clipboard, so you can press <kbd>Ctrl</kbd> + <kbd>V</kbd> to get it back. You can use _$selection_ inside your prompts to insert the selected text into the prompt, please see the built-in prompts for examples.
 
-Keep in mind that **changes won't be saved until the Save button is clicked!**
+> [!NOTE]  
+> When using this extension with Reddit, please switch to **Markdown Mode** first, as Reddit's "fancy" editor has issues with handling paste events.
+
+> [!IMPORTANT]  
+> Keep in mind that **changes won't be saved until the Save button is clicked!**
 
 ## Disclaimer
 

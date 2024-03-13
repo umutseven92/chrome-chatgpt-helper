@@ -114,6 +114,10 @@ async function init() {
 					body: "Please rewrite the following in a casual manner: $selection",
 				},
 				{
+					name: "Fix typos",
+					body: "Please rewrite the following with all the typos fixed: $selection",
+				},
+				{
 					name: "Cat Joke",
 					body: "Please give me a funny joke about cats.",
 				},

@@ -6,10 +6,10 @@ chrome.runtime.onMessage.addListener(function (request, _, _) {
 		return;
 	}
 
-	replaceSelectedText(request.replacement, request.selection);
+	replaceSelectedText(request.replacement);
 });
 
-function replaceSelectedText(toReplace, originalSelection) {
+function replaceSelectedText(toReplace) {
 	const activeElement = document.activeElement;
 
 	if (activeElement.value) {
@@ -28,22 +28,15 @@ function replaceSelectedText(toReplace, originalSelection) {
 			activeElement.value.slice(0, activeElement.selectionStart) +
 			toReplace +
 			activeElement.value.slice(activeElement.selectionEnd);
-	} else if (
-		activeElement.textContent !== undefined ||
-		activeElement.textContent !== null
-	) {
-		// Custom textbox, like Draft.js. Even though it is deprecated, we need to use execCommand here- setting the innerText manually just causes React to override the value.
-		const val = activeElement.textContent;
+	} else {
+		// A custom text input field, probably something like Draft.js.
+		// While `execCommand` is deprecated, as of writing (2024) there is still no replacement,
+		// and since there are so many apps / services that depend on it, it is unlikely to be removed anytime soon.
+		// One exception to this is Reddit; since Reddit is a horrible website that refuses to follow established standards,
+		// `execCommand` breaks backspace & deletion in their "fancy" text editor. Literally nothing works, not `execComand`,
+		// not `dispatchEvent`, nothing. The only thing that can be done is do switch to the Markdown editor, paste, and then
+		// go back.
 
-		const selection = originalSelection.trim();
-		if (selection) {
-			navigator.clipboard.writeText(selection);
-			// There is a potential problem here; since we don't have the selection indices (like we do for regular input fields), we have to do a naive string replace.
-			// This means that if the selected text is duplicated in the textContent, only the first occurance will be replaced, as we don't know which one is selected.
-			const newText = val.replace(selection, toReplace);
-			document.execCommand("insertText", false, newText);
-		} else {
-			document.execCommand("insertText", false, toReplace);
-		}
+		document.execCommand("insertText", false, toReplace);
 	}
 }

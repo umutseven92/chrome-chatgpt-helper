@@ -51,8 +51,21 @@ h1 {
 	font-size: 2.5em;
 }
 
-legend {
+p {
 	font-size: 1.2em;
+}
+
+input,
+textarea {
+	font-size: 1.1em;
+}
+
+legend {
+	font-size: 1.5em;
+}
+
+label {
+	font-size: 1.3em;
 }
 
 #base {
@@ -102,5 +115,5 @@ textarea {
 }
 
 .secondary {
-    color: var(--secondary-color);
+	color: var(--secondary-color);
 }

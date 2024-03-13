@@ -69,7 +69,6 @@ function getPromptsFromDocument() {
 
 	for (let index = 0; index < promptElems.length; index++) {
 		const element = promptElems[index];
-		console.log(element);
 		const promptName = element.querySelector("input").value;
 		const promptBody = element.querySelector("textarea").value;
 		results.push({ name: promptName, body: promptBody });
@@ -89,17 +88,21 @@ function restoreOptions() {
 				}
 				addPromptUI(prompt.name, prompt.body);
 			});
-			const deletePromptButtons = document.querySelectorAll(".deletePrompt");
-
-			deletePromptButtons.forEach((button) => {
-				button.addEventListener("click", deletePromptUI);
-			});
-
+			
+			setDeleteEvents();
 			keyInput.value = items.oaiKey;
 			modelSelect.value = items.model;
 			checkKeyValidity();
 		}
 	);
+}
+
+function setDeleteEvents() {
+	const deletePromptButtons = document.querySelectorAll(".deletePrompt");
+
+	deletePromptButtons.forEach((button) => {
+		button.addEventListener("click", deletePromptUI);
+	});
 }
 
 function checkKeyValidity() {
@@ -163,6 +166,7 @@ function getPromptUI(name, body) {
 
 function addEmptyPromptUI() {
 	addPromptUI("", "");
+	setDeleteEvents();
 }
 
 function addPromptUI(name, body) {
